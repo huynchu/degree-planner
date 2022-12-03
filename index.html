@@ -11,78 +11,58 @@
 </head>
 
 <body>
-  <h1><i class="fa-solid fa-building-columns"></i> 4 Year Plan</h1>
-  <div class="add-semester">
-    <p>Enter the Semester Name and Select a year (i.e Fall 2021, First-Year)</p>
-    <form id="add-semester-form" action="">
-      <input type="text" id="sem-name-input" placeholder="Enter a Semester Name">
-      <select name="class-year" id="class-year-select">
-        <option value="year-1" selected> First Year</option>
-        <option value="year-2"> Second Year</option>
-        <option value="year-3"> Third Year </option>
-        <option value="year-4"> Fourth Year </option>
-        <option value="year-5"> Fifth Year </option>
-      </select>
-      <input type="submit" value="Add" id="add-sem-btn">
-    </form>
-  </div>
+  <div class="wrapper">
+    <h1><i class="fa-solid fa-building-columns"></i> 4 Year Plan</h1>
+    <div class="add-semester">
+      <p>Enter a Semester Name and Select a year (i.e Fall 2021, First-Year)</p>
+      <form id="add-semester-form" action="">
+        <input type="text" id="sem-name-input" class="text-input" placeholder="Enter a Semester Name">
+        <select name="class-year" id="class-year-select" class="select">
+          <option value="year-1" selected> First Year</option>
+          <option value="year-2"> Second Year</option>
+          <option value="year-3"> Third Year </option>
+          <option value="year-4"> Fourth Year </option>
+          <option value="year-5"> Fifth Year </option>
+        </select>
+        <input type="submit" value="Add" id="add-sem-btn" class="submit-button">
+      </form>
+    </div>
 
+    <div class="empty">
+      <h2> Empty Degree Plan </h2>
+      <hr>
+    </div>
 
-  <div class="years" id="years">
-    <div class="year hidden" id="year-1">
-      <h2>First Year</h2>
-      <div class="semesters" id="year-1-content">
+    <div class="years" id="years">
+      <div class="year hidden" id="year-1">
+        <h2>First Year</h2>
+        <hr>
+        <div class="semesters" id="year-1-content">
+        </div>
       </div>
-    </div>
-
-    <div class="year hidden" id="year-2">
-      <h2>Second Year</h2>
-      <div class="semesters" id="year-2-content"></div>
-    </div>
-    <div class="year hidden" id="year-3">
-      <h2>Third Year</h2>
-      <div class="semesters" id="year-3-content"></div>
-    </div>
-    <div class="year hidden" id="year-4">
-      <h2>Fourth Year</h2>
-      <div class="semesters" id="year-4-content"></div>
-    </div>
-    <div class="year hidden" id="year-5">
-      <h2>Fifth Year</h2>
-      <div class="semesters" id="year-5-content"></div>
-    </div>
-    <!-- <div>
-    <div class="container">
-      <div class="semester">
-        <h2>Fall 2020</h2>
-        <form action="">
-          <input type="text" class="course-input">
-          <select name="credit" id="credit">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4" selected>4</option>
-          </select>
-          <input type="submit" value="Add Course">
-        </form>
+      <div class="year hidden" id="year-2">
+        <h2>Second Year</h2>
+        <hr>
+        <div class="semesters" id="year-2-content"></div>
       </div>
-      <div class="semester">
-        <h2>Spring 2021</h2>
-        <form action="">
-          <input type="text" class="course-input">
-          <select name="credit" id="credit">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4" selected>4</option>
-          </select>
-          <input type="submit" value="Add Course">
-        </form>
+      <div class="year hidden" id="year-3">
+        <h2>Third Year</h2>
+        <hr>
+        <div class="semesters" id="year-3-content"></div>
       </div>
-    </div>
-  </div> -->
+      <div class="year hidden" id="year-4">
+        <h2>Fourth Year</h2>
+        <hr>
+        <div class="semesters" id="year-4-content"></div>
+      </div>
+      <div class="year hidden" id="year-5">
+        <h2>Fifth Year</h2>
+        <hr>
+        <div class="semesters" id="year-5-content"></div>
+      </div>
 
-    <script src="main.js"></script>
+      <script src="main.js"></script>
+    </div>
 </body>
 
 </html>

@@ -1,13 +1,18 @@
 const addSembtn = document.querySelector("#add-sem-btn");
 addSembtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const semName = document.querySelector("#sem-name-input").value;
-  const year = document.querySelector("#class-year-select").value;
+
+  // Read user semester input
+  const semNameInput = document.querySelector("#sem-name-input");
+  const yearInput = document.querySelector("#class-year-select");
+  const semName = semNameInput.value;
+  const year = yearInput.value;
+
   if (semName.length === 0) {
     alert("Please Enter a Semester name");
     return;
   }
-
+  document.querySelector(".empty").classList.add("hidden");
   // Select the correct year and unhide
   root = document.querySelector(`#${year}`);
   root.classList.remove("hidden");
@@ -17,12 +22,12 @@ addSembtn.addEventListener("click", (e) => {
   semesterDiv.classList.add("semester");
   semesterDiv.innerHTML = `
   <div class="container">
-    <h2>${semName}</h2>
-    <i class="fa-solid fa-xmark" id="delete-sem"></i>
+    <h3>${semName}</h3>
+    <i class="fa-solid fa-xmark delete-sem" id="delete-sem"></i>
   </div>
-  <form action="">
-    <input type="text" class="course-input" id="course-input">
-    <select name="credit" id="credit">
+  <form action="" class="add-course-form">
+    <input type="text" class="text-input" id="course-input" placeholder="Enter a course name">
+    <select name="credit" id="credit" class="select">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -43,8 +48,11 @@ addSembtn.addEventListener("click", (e) => {
   console.log(addCourseBtn);
   addCourseBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    const courseName = semesterDiv.querySelector("#course-input").value;
-    const credit = semesterDiv.querySelector("#credit").value;
+    // Reading user input
+    const courseNameInput = semesterDiv.querySelector("#course-input");
+    const creditInput = semesterDiv.querySelector("#credit");
+    const courseName = courseNameInput.value;
+    const credit = creditInput.value;
 
     // Adding course
     if (courseName.length == 0) {
@@ -58,10 +66,22 @@ addSembtn.addEventListener("click", (e) => {
       </div>
       `;
 
+      // Delete Course
       const trashIcon = document.createElement("i");
-      trashIcon.className = "fa-solid fa-trash";
+      trashIcon.className = "fa-solid fa-trash delete-course";
+      trashIcon.addEventListener("click", (e) => {
+        courseItem.remove();
+      });
+
       const checkIcon = document.createElement("i");
-      checkIcon.className = "fa-regular fa-square-check";
+      checkIcon.className = "fa-regular fa-square-check check-course";
+      checkIcon.addEventListener("click", (e) => {
+        if (courseItem.classList.contains("completed")) {
+          courseItem.classList.remove("completed");
+        } else {
+          courseItem.classList.add("completed");
+        }
+      });
 
       const childDiv = document.createElement("div");
       childDiv.appendChild(checkIcon);
@@ -70,9 +90,14 @@ addSembtn.addEventListener("click", (e) => {
 
       const courseList = semesterDiv.querySelector("#course-list");
       courseList.appendChild(courseItem);
+
+      // reset input
+      courseNameInput.value = "";
     }
   });
 
   const yearContent = document.querySelector(`#${year}` + "-content");
   yearContent.appendChild(semesterDiv);
+
+  semNameInput.value = "";
 });
