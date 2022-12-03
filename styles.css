@@ -6,27 +6,50 @@
 
 .container {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
+}
+
+.years {
+  display: flex;
+  flex-direction: column;
+}
+
+.year {
+}
+
+.semesters {
+  display: flex;
+  justify-content: space-evenly;
+  border: black solid 1px;
 }
 
 .semester {
+  border: black solid 1px;
+  padding: 10px 30px;
+  min-height: 200px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.course-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+i {
+  margin-left: 5px;
 }
 
 h1 {
   text-align: center;
   margin: 50px 0;
-}
-
-h2 {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-ul {
-  margin-top: 10px;
-  list-style: none;
-  background-color: #fff;
 }
 
 .done {
