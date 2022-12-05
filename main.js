@@ -33,7 +33,7 @@ addSembtn.addEventListener("click", (e) => {
       <option value="3">3</option>
       <option value="4" selected>4</option>
     </select>
-    <input id="submit" type="submit" value="Add Course">
+    <input id="submit" type="submit" value="Add Course" class="submit-button">
     </form>
     <div class="course-list" id="course-list"></div>`;
 

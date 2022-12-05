@@ -51,16 +51,18 @@
 }
 
 .submit-button {
-  background-color: rgba(75, 195, 151, 0.4);
+  background-color: #2e569c;
+  color: white;
   padding: 5px 15px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: none;
   transition: 0.35s;
-  border: 1.5px solid #348a6a;
+  border: 1.5px solid #2e569c;
 }
 
 .submit-button:hover {
-  background-color: #4bc397;
+  background-color: transparent;
+  color: black;
 }
 
 p {
