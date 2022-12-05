@@ -40,12 +40,33 @@ addSembtn.addEventListener("click", (e) => {
   // Add remove semester button/icon
   const deleteSemester = semesterDiv.querySelector("#delete-sem");
   deleteSemester.addEventListener("click", (e) => {
+    const allSemesters = semesterDiv.parentElement;
     semesterDiv.remove();
+
+    // console.log(allSemesters.querySelector(".semester"));
+    if (allSemesters.querySelector(".semester") === null) {
+      const year = allSemesters.parentElement;
+      year.classList.add("hidden");
+
+      const all_years = document.querySelectorAll(".year");
+
+      let empty_degree = true;
+      for (let year of all_years) {
+        console.log(year);
+        // console.log(year.classList.contains("hidden"));
+        if (!year.classList.contains("hidden")) {
+          empty_degree = false;
+        }
+      }
+      if (empty_degree) {
+        const empty_degree_div = document.querySelector(".empty");
+        empty_degree_div.classList.remove("hidden");
+      }
+    }
   });
 
   // Add course to semester
   const addCourseBtn = semesterDiv.querySelector("#submit");
-  console.log(addCourseBtn);
   addCourseBtn.addEventListener("click", (e) => {
     e.preventDefault();
     // Reading user input
