@@ -4,29 +4,120 @@
   font-family: sans-serif;
 }
 
-.container {
+.wrapper {
+  width: 85%;
+  margin: auto;
+}
+
+/* Add semester form */
+.add-semester {
+  margin-bottom: 40px;
+}
+
+.add-semester form {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+}
+
+.text-input {
+  outline: none;
+  padding: 5px;
+  border: 1.5px solid #2c2c2c;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  transition: 0.3s;
+}
+
+.text-input:hover {
+  border: 1.5px solid rgba(44, 44, 44, 0.7);
+}
+
+.text-input:focus {
+  border: 1.5px solid #4a81c3;
+}
+
+.select {
+  outline: none;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1.5px solid #2c2c2c;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: none;
+  transition: 0.3s;
+}
+
+.select:hover {
+  border-color: #4a81c3;
+}
+
+.submit-button {
+  background-color: #2e569c;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: none;
+  transition: 0.35s;
+  border: 1.5px solid #2e569c;
+}
+
+.submit-button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/*  */
+.years {
+  display: flex;
+  flex-direction: column;
+}
+
+.year {
+  margin-bottom: 40px;
+}
+
+.semesters {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .semester {
+  padding: 10px 30px;
+  min-height: 200px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+/* Add Course Form */
+.add-course-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* Course Items */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.course-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+i {
+  margin-left: 5px;
 }
 
 h1 {
   text-align: center;
   margin: 50px 0;
-}
-
-h2 {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-ul {
-  margin-top: 10px;
-  list-style: none;
-  background-color: #fff;
 }
 
 .done {
@@ -35,4 +126,29 @@ ul {
 
 .hidden {
   display: none;
+}
+
+hr {
+  background-color: #2c2c2c;
+  border: 0.5px solid #2c2c2c;
+  margin-bottom: 15px;
+}
+
+/* Delete Semester Icon */
+.delete-sem {
+  color: #2c2c2c;
+}
+
+.delete-sem:hover {
+  color: #4c4c4c;
+}
+
+/* Course Icons */
+.delete-course {
+  color: rgba(77, 77, 77, 0.75);
+  transition: 0.5s;
+}
+
+.delete-course:hover {
+  color: rgb(255, 0, 0);
 }
