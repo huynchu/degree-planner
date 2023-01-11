@@ -5,11 +5,12 @@ const courseSlice = createSlice({
   initialState: {
     data: [
       {
+        id: nanoid(),
         name: "Computer Science I",
         code: 1100,
         dept: "CSCI",
         credit: 4,
-        id: nanoid(),
+        sem: "Fall 2020",
       },
     ],
   },
@@ -21,6 +22,7 @@ const courseSlice = createSlice({
         code: action.payload.code,
         dept: action.payload.dept,
         credit: action.payload.credit,
+        sem: action.payload.sem,
       });
     },
 
