@@ -1,5 +1,13 @@
+import SemesterList from "./components/SemesterList";
+import SideBar from "./components/SideBar";
+
 function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <SideBar />
+      <SemesterList />
+    </div>
+  );
 }
 
 export default App;

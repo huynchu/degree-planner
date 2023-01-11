@@ -4,7 +4,7 @@ import { semestersReducer, addSemester } from "./slices/semestersSlice";
 
 const store = configureStore({
   reducer: {
-    coures: courseReducer,
+    courses: courseReducer,
     semesters: semestersReducer,
   },
 });

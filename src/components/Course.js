@@ -4,8 +4,9 @@ function Course({ course }) {
   return (
     <div class="panel">
       <div>
-        <p>{course.name}</p>
-        <span>{course.credit}</span>
+        <p>
+          {course.name} - <span>{course.credit}</span>
+        </p>
       </div>
       <MdDeleteForever />
     </div>
