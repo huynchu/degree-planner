@@ -8,6 +8,14 @@ const semestersSlice = createSlice({
         name: "Fall 2020",
         id: nanoid(),
       },
+      {
+        name: "Spring 2021",
+        id: nanoid(),
+      },
+      {
+        name: "Fall 2022",
+        id: nanoid(),
+      },
     ],
   },
   reducers: {

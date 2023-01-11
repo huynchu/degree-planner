@@ -1,8 +1,9 @@
+import "./Course.css";
 import { MdDeleteForever } from "react-icons/md";
 
 function Course({ course }) {
   return (
-    <div class="panel">
+    <div className="panel">
       <div>
         <p>
           {course.name} - <span>{course.credit}</span>

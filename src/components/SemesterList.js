@@ -1,3 +1,4 @@
+import "./SemesterList.css";
 import { useSelector } from "react-redux";
 import Course from "./Course";
 
@@ -17,14 +18,16 @@ function SemesterList() {
     });
 
     return (
-      <div key={semester.id}>
+      <div className="semester-panel">
         {semester.name}
-        <div>{renderedCourses}</div>
+        <div key={semester.id}>
+          <div>{renderedCourses}</div>
+        </div>
       </div>
     );
   });
 
-  return <div>{renderedSemesters}</div>;
+  return <div className="semesters">{renderedSemesters}</div>;
 }
 
 export default SemesterList;

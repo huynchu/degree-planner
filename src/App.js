@@ -1,11 +1,14 @@
+import "./index.css";
 import SemesterList from "./components/SemesterList";
 import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <SideBar />
-      <SemesterList />
+      <div>
+        <SemesterList />
+      </div>
     </div>
   );
 }

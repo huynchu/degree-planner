@@ -1,5 +1,11 @@
+import Form from "./Form";
+
 function SideBar() {
-  return <div>SideBar</div>;
+  return (
+    <div>
+      <Form />
+    </div>
+  );
 }
 
 export default SideBar;

@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 10px 20px;
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px rgba(57, 57, 57, 0.3);
+}
