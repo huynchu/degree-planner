@@ -22,6 +22,7 @@ function SemesterForm() {
         <form onSubmit={handleSemesterSubmit}>
           {selectedYear}
           {selectedSemType}
+          <button type="submit"> Add Semester </button>
         </form>
       </div>
     </div>
