@@ -11,16 +11,14 @@ function SemesterList() {
       return course.sem === semester.name;
     });
 
-    console.log(filteredCourses);
-
     const renderedCourses = filteredCourses.map((course) => {
       return <Course key={course.id} course={course} />;
     });
 
     return (
-      <div className="semester-panel">
+      <div className="semester-panel" key={semester.id}>
         {semester.name}
-        <div key={semester.id}>
+        <div>
           <div>{renderedCourses}</div>
         </div>
       </div>

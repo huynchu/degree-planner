@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import SemesterForm from "./SemesterForm";
 
 function Form({ course }) {
   const dispatch = useDispatch();
@@ -14,18 +14,15 @@ function Form({ course }) {
   };
 
   const renderedOptions = semesters.map((semester) => {
-    return <option value={semester.name}>{semester.name}</option>;
+    return (
+      <option value={semester.name} key={semester.name}>
+        {semester.name}
+      </option>
+    );
   });
   return (
     <div>
-      <div>
-        <h2>Add Semester</h2>
-        <form onSubmit={handleSemesterSubmit}>
-          <div>
-            <input type="text"></input>
-          </div>
-        </form>
-      </div>
+      <SemesterForm />
       <div>
         <h2>Add Course</h2>
         <form onSubmit={handleCourseSubmit}>
