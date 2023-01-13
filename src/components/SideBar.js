@@ -1,9 +1,10 @@
 import Form from "./Form";
+import SemesterForm from "./SemesterForm";
 
 function SideBar() {
   return (
     <div>
-      <Form />
+      <SemesterForm />
     </div>
   );
 }
