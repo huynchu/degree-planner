@@ -6,14 +6,20 @@ const semestersSlice = createSlice({
     data: [
       {
         name: "Fall 2020",
+        semType: "Fall",
+        year: "2020",
         id: nanoid(),
       },
       {
         name: "Spring 2021",
+        semType: "Spring",
+        year: "2021",
         id: nanoid(),
       },
       {
         name: "Fall 2022",
+        semType: "Fall",
+        year: "2022",
         id: nanoid(),
       },
     ],
@@ -22,6 +28,8 @@ const semestersSlice = createSlice({
     addSemester(state, action) {
       state.data.push({
         name: action.payload.name,
+        semType: action.payload.semType,
+        year: action.payload.year,
         id: nanoid(),
       });
     },

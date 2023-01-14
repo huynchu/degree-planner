@@ -39,6 +39,7 @@ function SemesterForm() {
     { label: "Fall Arch Away", value: "Fall Arch Away" },
     { label: "Spring Arch Away", value: "Spring Arch Away" },
   ];
+
   const handleSemesterSubmit = (event) => {
     event.preventDefault();
     if (!selectedYear || !selectedSemType) {
@@ -49,6 +50,8 @@ function SemesterForm() {
     dispatch(
       addSemester({
         name: `${selectedSemType} ${selectedYear}`,
+        semType: selectedSemType,
+        year: selectedYear,
       })
     );
   };
