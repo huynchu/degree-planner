@@ -34,15 +34,14 @@ const semestersSlice = createSlice({
       });
     },
 
-    // deleteCourse(state, action) {
-    //   const data = state.filter((course) => {
-    //     return course.id !== action.payload.id;
-    //   });
-
-    //   state = data;
-    // },
+    removeSemester(state, action) {
+      const data = state.data.filter((semester) => {
+        return semester.id !== action.payload.id;
+      });
+      state.data = data;
+    },
   },
 });
 
-export const { addSemester } = semestersSlice.actions;
+export const { addSemester, removeSemester } = semestersSlice.actions;
 export const semestersReducer = semestersSlice.reducer;
