@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const courseFormSlice = createSlice({
   name: "courseForm",
   initialState: {
-    cnameInput: "",
-    ccreditSelect: 4,
+    courseName: "",
+    selectedCredit: 4,
   },
   reducers: {
     changeCnameInput(state, action) {
-      state.cnameInput = action.payload;
+      state.courseName = action.payload;
     },
     changeCcreditSelect(state, action) {
-      state.ccreditSelect = action.payload;
+      state.selectedCredit = action.payload;
     },
   },
 });
