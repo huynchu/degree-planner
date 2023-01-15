@@ -3,7 +3,7 @@ import SemesterForm from "./SemesterForm";
 
 function SideBar() {
   return (
-    <div>
+    <div className="sidebar">
       <SemesterForm />
     </div>
   );

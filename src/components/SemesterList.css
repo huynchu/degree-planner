@@ -1,5 +1,5 @@
 .semesters {
-  background-color: rgb(113, 113, 113);
+  /* background-color: rgb(113, 113, 113); */
   padding: 35px 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;

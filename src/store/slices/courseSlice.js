@@ -12,6 +12,7 @@ const courseSlice = createSlice({
         dept: "CSCI",
         credit: 4,
         sem: "Fall 2020",
+        completed: false,
       },
     ],
   },
@@ -27,7 +28,7 @@ const courseSlice = createSlice({
       });
     },
 
-    deleteCourse(state, action) {
+    removeCourse(state, action) {
       const data = state.data.filter((course) => {
         return course.id !== action.payload.id;
       });
