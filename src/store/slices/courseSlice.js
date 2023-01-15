@@ -1,4 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { removeSemester } from "./semestersSlice";
 
 const courseSlice = createSlice({
   name: "course",
@@ -27,12 +28,21 @@ const courseSlice = createSlice({
     },
 
     deleteCourse(state, action) {
-      const data = state.filter((course) => {
+      const data = state.data.filter((course) => {
         return course.id !== action.payload.id;
       });
 
-      state = data;
+      state.data = data;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(removeSemester, (state, action) => {
+      const data = state.data.filter((course) => {
+        return course.sem !== action.payload.name;
+      });
+
+      state.data = data;
+    });
   },
 });
 
