@@ -1,12 +1,15 @@
 import "./SemesterList.css";
 import { useSelector } from "react-redux";
 import Course from "./Course";
+import { useSortSemesters } from "../hooks/useSortSemesters";
 
 function SemesterList() {
   const semesters = useSelector(({ semesters: { data } }) => data);
   const courses = useSelector(({ courses: { data } }) => data);
 
-  const renderedSemesters = semesters.map((semester) => {
+  const sortedSemesters = useSortSemesters([...semesters]);
+
+  const renderedSemesters = sortedSemesters.map((semester) => {
     const filteredCourses = courses.filter((course) => {
       return course.sem === semester.name;
     });

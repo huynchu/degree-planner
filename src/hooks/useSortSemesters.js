@@ -13,7 +13,7 @@ function convertSemTypeToInt(semType) {
   }
 }
 
-function useSortSemesters(sem1, sem2) {
+function compareSemesters(sem1, sem2) {
   if (parseInt(sem1.year) < parseInt(sem2.year)) {
     return -1;
   } else if (parseInt(sem1.year) > parseInt(sem2.year)) {
@@ -23,6 +23,14 @@ function useSortSemesters(sem1, sem2) {
       convertSemTypeToInt(sem1.semType) - convertSemTypeToInt(sem2.semType)
     );
   }
+}
+
+function useSortSemesters(semestersList) {
+  console.log(semestersList);
+  const sortedSemesters = semestersList.sort((sem1, sem2) =>
+    compareSemesters(sem1, sem2)
+  );
+  return sortedSemesters;
 }
 
 export { useSortSemesters };
