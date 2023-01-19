@@ -10,6 +10,8 @@ function convertSemTypeToInt(semType) {
       return 4;
     case "Spring Arch Away":
       return 5;
+    default:
+      return 6;
   }
 }
 
@@ -26,7 +28,6 @@ function compareSemesters(sem1, sem2) {
 }
 
 function useSortSemesters(semestersList) {
-  console.log(semestersList);
   const sortedSemesters = semestersList.sort((sem1, sem2) =>
     compareSemesters(sem1, sem2)
   );
